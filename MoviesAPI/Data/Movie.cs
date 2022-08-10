@@ -13,6 +13,7 @@ namespace MoviesAPI.Data
         public string Summary { get; set; } = null;
         public List<string> Actors { get; set; }
 
+        [BsonExtraElements]
         public BsonDocument UnstructuredInfo { get; set; }
     }
 }

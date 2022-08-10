@@ -1,3 +1,4 @@
+using MongoDB.Bson;
 using MoviesAPI.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,21 +18,7 @@ app.MapGet("/api/movies/{id}", async(MoviesService moviesService, string id) =>
 
 app.MapPost("/api/movies", async (MoviesService moviesService, Movie movie) => 
 {
-    ////manually add the BsonDocument afterwards, not how I intend to do it ofc.
-    //var bsonDocument = new BsonDocument
-    //{
-    //  { "name", "MongoDB2" },
-    //  { "type", "Database2" },
-    //  { "count", 2 },
-    //  { "info", new BsonDocument
-    //  {
-    //    { "x", 255 },
-    //    { "y", 111 }
-    //  }}
-    //};
-    //movie.UnstructuredInfo = bsonDocument;
-
-    await moviesService.Create(movie);
+  await moviesService.Create(movie);
     return Results.Ok();
 });
 

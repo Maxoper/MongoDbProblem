@@ -1,9 +1,9 @@
 # MongoDbProblem
 
-How is it possible to add a field with unstructured data (unstructuredInfo) to a otherwise mapped domain class?
+How is it possible to add a field with unstructured data (unstructuredInfo) to an otherwise mapped domain class?
 I get the bottom error.
 
-If not - how is BsonDocument or any other clever solution anyway possible?
+If not - how is BsonDocument or any other clever solution, anyway?
 I always get JsonExceptions with BsonDocuments. 
 
 Polymorphic classes are not a solution I can go for, as I have a ton of unstructured data variants possible for the UnstructuredInfo field. 
