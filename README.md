@@ -1,7 +1,7 @@
 # MongoDbProblem
 
-How is it possible to add a field with unstructured data to a otherwise mapped domain class?
-I get the error below.
+How is it possible to add a field with unstructured data (unstructuredInfo) to a otherwise mapped domain class?
+I get the bottom error.
 
 If not - how is BsonDocument or any other clever solution anyway possible?
 I always get JsonExceptions with BsonDocuments. 
@@ -9,11 +9,11 @@ I always get JsonExceptions with BsonDocuments.
 Polymorphic classes are not a solution I can go for, as I have a ton of unstructured data variants possible for the UnstructuredInfo field. 
 
 
-Postman/ThunderClient Get/Post...
+**Postman/ThunderClient** Get/Post...
 ```
 http://localhost:5003/api/movies
 ```
-Body:
+**Body not working:**
 ```
 {
   "id": null,
@@ -34,7 +34,7 @@ Body:
 ```
 
 
-Null works ofc.
+**Body with Null works ofc.:**
 ```
 {
   "id": null,
